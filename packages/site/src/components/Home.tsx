@@ -4,6 +4,7 @@ import { MetamaskActions, MetaMaskContext } from '../hooks';
 import { connectSnap, isSnapInstalled, sendHello } from '../utils';
 import { ConnectButton, InstallFlaskButton, SendHelloButton } from './Buttons';
 import { Card } from './Card';
+import SignMessage from './SignMessage';
 
 const Container = styled.div`
   display: flex;
@@ -119,11 +120,10 @@ export const Home = () => {
   return (
     <Container>
       <Heading>
-        Welcome to <Span>template-snap</Span>
+        Welcome to <Span>DeAuth</Span>
       </Heading>
-      <Subtitle>
-        Get started by editing <code>src/index.ts</code>
-      </Subtitle>
+      <Subtitle>Link your passwords to your wallet</Subtitle>
+      <SignMessage></SignMessage>
       <CardContainer>
         {state.error && (
           <ErrorMessage>
@@ -159,9 +159,8 @@ export const Home = () => {
         )}
         <Card
           content={{
-            title: 'Send Hello message',
-            description:
-              'Display a custom message within a confirmation screen in MetaMask.',
+            title: 'Link Your Account',
+            description: 'Choose your social media account:',
             button: (
               <SendHelloButton
                 onClick={handleSendHelloClick}
@@ -174,10 +173,8 @@ export const Home = () => {
         />
         <Notice>
           <p>
-            Please note that the <b>snap.manifest.json</b> and{' '}
-            <b>package.json</b> must be located in the server root directory and
-            the bundle must be hosted at the location specified by the location
-            field.
+            Link the <b> passwords</b> of your social media accounts to your
+            <b> wallet. </b> Maximum <b>security </b>, minimum<b> memory.</b>
           </p>
         </Notice>
       </CardContainer>

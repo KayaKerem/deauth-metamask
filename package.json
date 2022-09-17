@@ -49,5 +49,11 @@
   "packageManager": "yarn@3.2.1",
   "engines": {
     "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@metamask/providers": "^9.1.0",
+    "ethers": "^5.7.1",
+    "web3": "^1.8.0",
+    "yarn": "^1.22.19"
   }
 }
